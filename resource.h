@@ -1,7 +1,5 @@
-#include "stdlib.h"
-#include "planet.h"
-
 typedef struct _Resource Resource;
+typedef struct _Planet Planet;
 
 struct _Resource{
 	int id;
@@ -27,6 +25,7 @@ struct _Resource{
 
 Resource *resource_new();
 Resource *resource_init(int id, char *name, int level, Planet *found_on[], Resource *ingredient1, Resource *ingredient2, Resource *ingedient3);
+void *resource_init_list();
 
 void print_resources(Resource *resources[], int count);
 void print_resource(Resource resource);
